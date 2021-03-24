@@ -1,11 +1,10 @@
 package com.revature.repository;
 
-import java.util.List;
-
 import javax.transaction.Transactional;
 
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -54,30 +53,9 @@ public class PortfolioRepositoryImpl implements PortfolioRepository{
 	@Override
 	public Portfolio getPortfolio(User user, Game game) {
 		try {
-			//TODO: How am I going to do this?
-		} catch (IndexOutOfBoundsException e) {
-			logger.debug(e);
-			return null;
-		}
-		return null;
-	}
-
-}
-
-/*
- * 
-	@SuppressWarnings("unchecked")
-	@Override
-	public List<User> getAllUsers() {
-		logger.info("Attempting to list all users.");
-		return sessionFactory.getCurrentSession().createCriteria(User.class).list();
-	}
-
-	@Override
-	public User getUser(String username) {
-		try {
-			return (User) sessionFactory.getCurrentSession().createCriteria(User.class).add(Restrictions.like("username", username))
-					.list().get(0);
+			int uid = user.getUserId();
+			int gid = game.getGameId();
+			return (Portfolio) sessionFactory.getCurrentSession().createCriteria(Portfolio.class).add(Restrictions.like("player_id", uid)).add(Restrictions.like("game_id", gid)).list().get(0);
 		} catch (IndexOutOfBoundsException e) {
 			logger.debug(e);
 			return null;
@@ -85,4 +63,3 @@ public class PortfolioRepositoryImpl implements PortfolioRepository{
 	}
 
 }
- */

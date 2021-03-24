@@ -14,6 +14,31 @@ import javax.persistence.Table;
 @Table(name="USER_ROLES")
 public class UserRole {
 	
+	
+	
+	public UserRole() {
+		super();
+	}
+	
+	
+
+	public UserRole(String roleName, List<User> userList) {
+		super();
+		this.roleName = roleName;
+		this.userList = userList;
+	}
+
+	public UserRole(int roleId, String roleName, List<User> userList) {
+		super();
+		this.roleId = roleId;
+		this.roleName = roleName;
+		this.userList = userList;
+	}
+
+
+
+
+
 	@Id
 	int roleId;
 	

@@ -19,7 +19,8 @@ public class UserControllerImpl implements UserController{
 	
 	@PostMapping("/register")
 	public @ResponseBody ClientMessage registerUser(@RequestBody User user) {
-		return (userService.register(user)) ? REGISTRATION_SUCCESSFUL:SOMETHING_WRONG;
+		userService.register(user);
+		return (user.getUserId() != 0) ? REGISTRATION_SUCCESSFUL:SOMETHING_WRONG;
 	}
 
 }
