@@ -21,6 +21,7 @@ public class Position {
 	@SequenceGenerator(name="positionSequence", sequenceName="POSITION_SEQ", allocationSize=1)
 	int positionId;
 	
+	//Stocks should be seperated with a comma
 	@Column(name="STOCK_SYMBOL")
 	String stockSymbol;
 	
