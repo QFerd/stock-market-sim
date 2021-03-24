@@ -1,22 +1,17 @@
 package com.revature.repository;
-import java.util.List;
 
 import javax.transaction.Transactional;
 
-import org.apache.log4j.Logger;
-import org.hibernate.Criteria;
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.revature.models.User;
-
-@Repository("userRepository")
+@Repository("gameRepository")
 @Transactional
-public class UserRepositoryImpl implements UserRepository{
+public class GameRepositoryImpl {
+
+}
+
+/*
+ * public class UserRepositoryImpl implements UserRepository{
 	
 	private static Logger logger = Logger.getLogger(UserRepositoryImpl.class);
 
@@ -52,8 +47,4 @@ public class UserRepositoryImpl implements UserRepository{
 	}
 
 }
-	
-/*	public List<User> getUserByClassroom(int id){
-		
-	}
-*/
+ */
