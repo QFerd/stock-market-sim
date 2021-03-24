@@ -27,4 +27,35 @@ public class GamePhase {
 	
 	@OneToMany(mappedBy="gamePhaseHolder", fetch	= FetchType.LAZY)
 	private List<Game> gameList = new ArrayList<Game>();
+
+	public int getPhaseId() {
+		return phaseId;
+	}
+
+	public void setPhaseId(int phaseId) {
+		this.phaseId = phaseId;
+	}
+
+	public String getPhaseName() {
+		return phaseName;
+	}
+
+	public void setPhaseName(String phaseName) {
+		this.phaseName = phaseName;
+	}
+
+	public List<Game> getGameList() {
+		return gameList;
+	}
+
+	public void setGameList(List<Game> gameList) {
+		this.gameList = gameList;
+	}
+
+	@Override
+	public String toString() {
+		return "GamePhase [phaseId=" + phaseId + ", phaseName=" + phaseName + ", gameList=" + gameList + "]";
+	}
+	
+	
 }

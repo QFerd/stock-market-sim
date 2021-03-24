@@ -49,4 +49,62 @@ public class Portfolio {
 	//Link to position
 	@OneToMany(mappedBy="portfolioHolder", fetch = FetchType.LAZY)
 	private List<Position> positionList = new ArrayList<Position>();
+
+	public int getPortfolioId() {
+		return portfolioId;
+	}
+
+	public void setPortfolioId(int portfolioId) {
+		this.portfolioId = portfolioId;
+	}
+
+	public double getTotalValue() {
+		return totalValue;
+	}
+
+	public void setTotalValue(double totalValue) {
+		this.totalValue = totalValue;
+	}
+
+	public double getStockValue() {
+		return stockValue;
+	}
+
+	public void setStockValue(double stockValue) {
+		this.stockValue = stockValue;
+	}
+
+	public double getCashValue() {
+		return cashValue;
+	}
+
+	public void setCashValue(double cashValue) {
+		this.cashValue = cashValue;
+	}
+
+	public User getPlayerHolder() {
+		return playerHolder;
+	}
+
+	public void setPlayerHolder(User playerHolder) {
+		this.playerHolder = playerHolder;
+	}
+
+	public Game getGameHolder() {
+		return gameHolder;
+	}
+
+	public void setGameHolder(Game gameHolder) {
+		this.gameHolder = gameHolder;
+	}
+
+	public List<Position> getPositionList() {
+		return positionList;
+	}
+
+	public void setPositionList(List<Position> positionList) {
+		this.positionList = positionList;
+	}
+	
+	
 }

@@ -35,5 +35,43 @@ public class Position {
 	@JoinColumn(name="User_FK")
 	private Portfolio portfolioHolder;
 
+	public int getPositionId() {
+		return positionId;
+	}
 
+	public void setPositionId(int positionId) {
+		this.positionId = positionId;
+	}
+
+	public String getStockSymbol() {
+		return stockSymbol;
+	}
+
+	public void setStockSymbol(String stockSymbol) {
+		this.stockSymbol = stockSymbol;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public Portfolio getPortfolioHolder() {
+		return portfolioHolder;
+	}
+
+	public void setPortfolioHolder(Portfolio portfolioHolder) {
+		this.portfolioHolder = portfolioHolder;
+	}
+
+	@Override
+	public String toString() {
+		return "Position [positionId=" + positionId + ", stockSymbol=" + stockSymbol + ", quantity=" + quantity
+				+ ", portfolioHolder=" + portfolioHolder + "]";
+	}
+	
+	
 }

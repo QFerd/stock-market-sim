@@ -7,14 +7,14 @@ import com.revature.models.User;
 
 public interface PortfolioRepository {
 	
-	boolean newPortfolio(User user, Game game);
+	void newPortfolio(Portfolio portfolio);
 	
 	double getTotalValue(User user, Game game);
 	
 	double getStockValue(User user, Game game);
 	
 	double getCashValue(User user, Game game);
-	
-	Portfolio findPortfolio (User user, Game game);
+
+	Portfolio getPortfolio(User user, Game game);
 
 }

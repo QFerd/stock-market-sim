@@ -6,8 +6,7 @@ import com.revature.models.User;
 
 public interface UserService {
 	
-	public boolean register(User user);
-	
+	public void register(User user);
 	
 	public List<User> getAllUsers();
 	

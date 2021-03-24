@@ -7,7 +7,7 @@ import com.revature.models.User;
 public interface UserRepository {
 	
 	
-	boolean register(User user);
+	void register(User user);
 	
 	List<User> getAllUsers();
 	

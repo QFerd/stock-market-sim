@@ -43,4 +43,46 @@ public class Game {
 	//Link to Portfolio
 	@OneToMany(mappedBy="gameHolder", fetch = FetchType.LAZY)
 	private List<Portfolio> portfolioList = new ArrayList<Portfolio>();
+
+	public int getGameId() {
+		return gameId;
+	}
+
+	public void setGameId(int gameId) {
+		this.gameId = gameId;
+	}
+
+	public LocalDate getGameStartDate() {
+		return gameStartDate;
+	}
+
+	public void setGameStartDate(LocalDate gameStartDate) {
+		this.gameStartDate = gameStartDate;
+	}
+
+	public LocalDate getGameCurrentDate() {
+		return gameCurrentDate;
+	}
+
+	public void setGameCurrentDate(LocalDate gameCurrentDate) {
+		this.gameCurrentDate = gameCurrentDate;
+	}
+
+	public GamePhase getGamePhaseHolder() {
+		return gamePhaseHolder;
+	}
+
+	public void setGamePhaseHolder(GamePhase gamePhaseHolder) {
+		this.gamePhaseHolder = gamePhaseHolder;
+	}
+
+	public List<Portfolio> getPortfolioList() {
+		return portfolioList;
+	}
+
+	public void setPortfolioList(List<Portfolio> portfolioList) {
+		this.portfolioList = portfolioList;
+	}
+	
+	
 }	
