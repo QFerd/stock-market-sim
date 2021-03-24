@@ -62,7 +62,7 @@
 
 
 		<!-- Annotation Mapping -->
-		<property name="packagesToScan" value="com.revature.model" />
+		<property name="packagesToScan" value="com.revature.models" />
 		<property name="hibernateProperties">
 
 			<props>

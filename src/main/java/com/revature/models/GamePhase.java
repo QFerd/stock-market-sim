@@ -18,9 +18,6 @@ import javax.persistence.Table;
 public class GamePhase {
 	
 	@Id
-	@Column
-	@ManyToOne(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
-	@JoinColumn(name="GAME_FK")
 	int phaseId;
 	
 	@Column(name="PHASE_NAME", unique=true, nullable=false)
