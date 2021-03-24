@@ -13,5 +13,5 @@ public interface UserRepository {
 	
 	//List<User> getUserByClassroom();
 	
-	User getAnUser(String username);
+	User getUser(String username);
 }
